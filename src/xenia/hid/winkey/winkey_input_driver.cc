@@ -162,7 +162,7 @@ X_RESULT WinKeyInputDriver::GetState(uint32_t user_index,
       // L
       buttons |= 0x4000;  // XINPUT_GAMEPAD_X
     }
-    if (IS_KEY_DOWN(VK_RETURN)) {
+    if (IS_KEY_DOWN(VK_BACK)) {
       // '
       buttons |= 0x2000;  // XINPUT_GAMEPAD_B
     }
@@ -180,12 +180,12 @@ X_RESULT WinKeyInputDriver::GetState(uint32_t user_index,
       buttons |= 0x0080;  // XINPUT_GAMEPAD_RIGHT_THUMB
     }
 
-    if (IS_KEY_DOWN('Q') || IS_KEY_DOWN('I')) {
+    if (IS_KEY_DOWN('Q') || IS_KEY_DOWN(VK_RBUTTON)) {
       // Q / I
       left_trigger = 0xFF;
     }
 
-    if (IS_KEY_DOWN('E') || IS_KEY_DOWN('O')) {
+    if (IS_KEY_DOWN(VK_LBUTTON) || IS_KEY_DOWN('O')) {
       // E / O
       right_trigger = 0xFF;
     }
@@ -194,15 +194,15 @@ X_RESULT WinKeyInputDriver::GetState(uint32_t user_index,
       // Z
       buttons |= 0x0020;  // XINPUT_GAMEPAD_BACK
     }
-    if (IS_KEY_DOWN(VK_OEM_COMMA)) {
+    if (IS_KEY_DOWN(VK_RETURN)) {
       // X
       buttons |= 0x0010;  // XINPUT_GAMEPAD_START
     }
-    if (IS_KEY_DOWN('1')) {
+    if (IS_KEY_DOWN(VK_F1)) {
       // 1
       buttons |= 0x0100;  // XINPUT_GAMEPAD_LEFT_SHOULDER
     }
-    if (IS_KEY_DOWN('3')) {
+    if (IS_KEY_DOWN(VK_F2)) {
       // 3
       buttons |= 0x0200;  // XINPUT_GAMEPAD_RIGHT_SHOULDER
     }
