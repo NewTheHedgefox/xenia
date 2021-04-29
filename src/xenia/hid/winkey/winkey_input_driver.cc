@@ -158,19 +158,19 @@ X_RESULT WinKeyInputDriver::GetState(uint32_t user_index,
       thumb_rx += SHRT_MIN;
     }
 
-    if (IS_KEY_DOWN('L')) {
+    if (IS_KEY_DOWN('M')) {
       // L
       buttons |= 0x4000;  // XINPUT_GAMEPAD_X
     }
-    if (IS_KEY_DOWN(VK_OEM_7)) {
+    if (IS_KEY_DOWN(VK_RETURN)) {
       // '
       buttons |= 0x2000;  // XINPUT_GAMEPAD_B
     }
-    if (IS_KEY_DOWN(VK_OEM_1)) {
+    if (IS_KEY_DOWN(VK_SPACE)) {
       // ;
       buttons |= 0x1000;  // XINPUT_GAMEPAD_A
     }
-    if (IS_KEY_DOWN('P')) {
+    if (IS_KEY_DOWN('N')) {
       // P
       buttons |= 0x8000;  // XINPUT_GAMEPAD_Y
     }
@@ -190,11 +190,11 @@ X_RESULT WinKeyInputDriver::GetState(uint32_t user_index,
       right_trigger = 0xFF;
     }
 
-    if (IS_KEY_DOWN('Z')) {
+    if (IS_KEY_DOWN(VK_OEM_PERIOD)) {
       // Z
       buttons |= 0x0020;  // XINPUT_GAMEPAD_BACK
     }
-    if (IS_KEY_DOWN('X')) {
+    if (IS_KEY_DOWN(VK_OEM_COMMA)) {
       // X
       buttons |= 0x0010;  // XINPUT_GAMEPAD_START
     }
